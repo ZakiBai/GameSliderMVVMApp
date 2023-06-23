@@ -18,7 +18,8 @@ struct ContentView: View {
                 .padding()
                 .alert(
                     "Your score",
-                    isPresented: $gameViewModel.alertIsPresented
+                    isPresented: $gameViewModel.alertIsPresented,
+                    actions: {}
                 ) {
                     Text(gameViewModel.scores)
                 }
