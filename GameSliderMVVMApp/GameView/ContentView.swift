@@ -12,7 +12,18 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-           
+            GameSliderView(gameViewModel: gameViewModel, color: .red)
+            
+            Button("Check me!", action: gameViewModel.showAlert)
+                .padding()
+                .alert(
+                    "Your score",
+                    isPresented: $gameViewModel.alertIsPresented
+                ) {
+                    Text(gameViewModel.scores)
+                }
+            
+            Button("Restart", action: gameViewModel.reset)
         }
         .padding()
     }
