@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var gameViewModel = GameViewModel()
+    
     var body: some View {
         VStack {
            
